@@ -1,0 +1,386 @@
+/*
+ *  This is the file where you put your CSS changes. 
+ *  You should preferrably use this and override the 
+ *  relevant properties you want to change here instead 
+ *  of customizing plone.css to survive upgrades. Writing
+ *  your own plone.css only makes sense for very heavy 
+ *  customizations. Useful variables from Plone are 
+ *  documented at the bottom of this file.
+ */
+ 
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+
+
+#bdr-presentation {
+ background-image: url('&dtml-portal_url;/presentation.gif');
+}
+#bdr-equipes {
+ background-image: url('&dtml-portal_url;/equipes.gif');
+}
+#bdr-productions {
+ background-image: url('&dtml-portal_url;/productions.gif');
+}
+#bdr-enseignement {
+ background-image: url('&dtml-portal_url;/enseignement.gif');
+}
+#bdr-partenariat {
+ background-image: url('&dtml-portal_url;/partenariat.gif');
+}
+#bdr-contact {
+ background-image: url('&dtml-portal_url;/contact.gif');
+}
+#bdr-intranet {
+ background-image: url('&dtml-portal_url;/intranet.gif');
+}
+#bdr-intranet-vieumr {
+ background-image: url('&dtml-portal_url;/vieumr.gif');
+}
+#bdr-intranet-reunions {
+ background-image: url('&dtml-portal_url;/reunion.gif');
+}
+#bdr-intranet-personnel {
+ background-image: url('&dtml-portal_url;/personnel.gif');
+}
+#bdr-intranet-documents {
+ background-image: url('&dtml-portal_url;/doc.gif');
+}
+#bdr-intranet-documents-catalogues {
+ background-image: url('&dtml-portal_url;/puce2.gif');
+}
+#bdr-intranet-documents-compterendu {
+ background-image: url('&dtml-portal_url;/puce2.gif');
+}
+#bdr-intranet-documents-rapports {
+ background-image: url('&dtml-portal_url;/puce2.gif');
+}
+#bdr-intranet-documents-divers {
+ background-image: url('&dtml-portal_url;/puce2.gif');
+}
+#bdr-intranet-qualite {
+ background-image: url('&dtml-portal_url;/qualite.gif');
+}
+#bdr-intranet-prevention {
+ background-image: url('&dtml-portal_url;/prevention.gif');
+}
+#bdr-intranet-informatique {
+ background-image: url('&dtml-portal_url;/informatique.gif');
+}
+
+
+#portal-logodroit {
+    padding: 0;
+    margin: 0;
+   float: right;
+}
+
+#portal-searchbox {
+    padding: 0 2em 0 0;
+    margin: -0.3em 0 0 0;
+   float: right;
+}
+
+ #portal-logo {
+    margin: 0;
+}
+
+#portal-top {
+    /* Top section */
+    margin: 20px 0 0 0;
+    padding: 0px;
+    border: 0px;
+    background-color: #fcfcfc;
+    background: url(&dtml-portal_url;/logomilieu.jpg) repeat;
+}
+
+#portal-personaltools {
+    /* Bar with personalized menu (user preferences, favorites etc) */
+    background-color: transparent;
+    /*border-top-color: &dtml-globalBorderColor;;
+    border-top-style: &dtml-borderStyle;;
+    border-top-width: &dtml-borderWidth;;
+    border-bottom-color: &dtml-globalBorderColor;;
+    border-bottom-style: &dtml-borderStyle;;
+    border-bottom-width: &dtml-borderWidth;;*/
+    /*line-height: 1.3em;*/
+    color: &dtml-fontColor;;
+    /*padding: 0em 3em 0em 3em;*/
+    margin: 0;
+    border: 0;
+    text-align: left;
+    text-transform: &dtml-textTransform;;
+    list-style: none;
+    line-height: normal;
+}
+#portal-personaltools li {
+    background: transparent url(&dtml-portal_url;/linkOpaque.gif) center left no-repeat;
+    padding-left: 8px;
+    color: &dtml-globalFontColor;;
+    margin-left: 1em;
+    display: block;
+}
+#portal-personaltools li a {
+    text-decoration: none;
+    color: &dtml-globalFontColor;;
+}
+#portal-footer {
+    background: url(&dtml-portal_url;/milieubas.jpg) repeat-x;
+    border: 0;
+    float: none;
+    margin: 2em 0em 1em 0em;
+    padding: 0em 0em 1em 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
+#portal-colophon {
+    float: none;
+    margin: 0em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
+    text-align: center;
+}
+
+/*Elements ajoutes par Christian pour mettre le colophon sur une ligne droite*/
+
+#portal-colophon ul,
+#portal-colophon ul li,
+#portal-colophon ul li a {
+    list-style-image: none;
+    list-style-type: none;
+    display: inline;
+    text-decoration: none;
+    color: &dtml-fontColor;;
+}
+
+#portal-colophon ul {
+    display: table-row;
+    list-style-type: none;
+}
+
+#portal-colophon ul li {
+    display: table-cell;
+    font-size: &dtml-fontSmallSize;;
+    margin: 0 0.25em;
+    padding: 0.1em 0.4em;
+}
+
+#portal-colophon .colophonWrapper {
+    display: table;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#portal-colophon .colophonIcon {
+    display: block; /* This is for Mozilla, as it doesn't support
+                       inline-block. The colophon icons aren't in
+                       one line though. */
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 15px;
+    height: 30px;
+    width: 80px;
+}
+
+#portal-colophon a.colophonIcon {
+    cursor: pointer;
+}
+
+
+/*Elements ajoutes par Christian*/
+
+.portletNavigationTree {
+    margin: 0 0 0 0; 
+    padding: 0; 
+    list-style: none; 
+    list-style-image: none; 
+    line-height: 1em;
+}
+
+.navTree {
+    list-style: none; 
+    list-style-image: none; 
+    margin-top: 1px;
+
+}
+
+.navTree li {
+    margin-bottom: 0px;
+    margin-left: -5px;
+
+}
+
+.navTreeItem {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.navTreeItem a,
+dd.portletItem .navTreeItem a {
+    padding-left: 27px;
+    line-height: 22px;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
+    display: block;
+    text-decoration: none;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    color: &dtml-globalFontColor;;
+
+}
+
+.navTreeItem a:hover,
+dd.portletItem .navTreeItem a:hover {
+    background-color: #e1f1de;
+    color: &dtml-globalFontColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; transparent;
+}
+
+.navTreeCurrentItem {
+    background-color: #e1f1de;
+    color: &dtml-globalFontColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor; !important;
+    font-weight: bold;
+}
+
+li.navTreeCurrentItem {
+    display: block;
+    padding: 0 0 0 1px;
+    margin: 0 0 2px -1px;
+}
+
+li.navTreeCurrentItem a, {
+    display: block;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBackgroundColor;;
+    min-height: 1.6em;
+    line-height: 1.6em;
+    height: auto;
+}
+
+li.navTreeCurrentItem a:hover {
+    display: block;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBackgroundColor;;
+    min-height: 1.6em;
+    line-height: 1.6em;
+    height: auto;
+}
+
+.portletHeader {
+    background-color: &dtml-globalBorderColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    padding: 0em 0.5em;
+    text-transform: &dtml-textTransform;;
+    font-weight: normal;
+    color: white;
+    line-height: 1.4em;
+}
+
+.portletHeader a {
+  	 color: white; 
+}
+.portletItem {
+    margin: 0;
+    padding: 0.5em;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+.portletItem a {
+    display: block;
+}
+
+.portletItemDetails {
+    text-align: right;
+    display: block;
+    color: &dtml-fontColor;;
+}
+#portal-personaltools .visualIconPadding {
+    padding-left: 10px;
+}
+
+
+
+/* </dtml-with> */
+
+/* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */
+
+ /* You can insert colors and other variables from Plone's 
+    base_properties by doing:
+    
+    & dtml-variableName ; (without the spaces, excluded here to not make it render)
+    
+    Example:
+    
+    myLink {
+        color: & dtml-fontColor ;   (again, without the spaces)
+    }
+ 
+   This means you can generate your own elements that use Plone's defaults,
+   and respect any customizations people have done. See base_properties for
+   the default values.
+ 
+   These are the available properties:
+   
+   logoName - the file name of the portal logo
+   
+   fontFamily - the font family used for all text that is not headers
+   
+   fontBaseSize - the base font size that everything is calculated from
+   
+   fontColor - the main font color
+   
+   fontSmallSize - used for various elements like buttons and discreet text
+   
+   discreetColor - the font color of discreet text
+
+   backgroundColor - the background color 
+   
+   linkColor - the color used on normal links
+
+   linkActiveColor - color used on active links
+
+   linkVisitedColor - color used on visited links
+   
+   borderWidth - the width of most borders in Plone
+   
+   borderStyle - the style of the border lines, normally solid
+   
+   borderStyleAnnotations - style of border lines on comments etc
+   
+   globalBorderColor - the border color used on the main tabs, the portlets etc
+   
+   globalBackgroundColor - background color for the selected tabs, portlet headings etc
+   
+   globalFontColor - the color of the font in the tabs and in portlet headings
+   
+   headingFontFamily - font family for h1/h2/h3/h4/h5/h6 headlines
+   
+   contentViewBorderColor - the content view tabs border color
+   
+   contentViewBackgroundColor - the content view tabs background color
+   
+   contentViewFontColor - the font color used in the content view tabs
+   
+   inputFontColor - the font color used for input elements
+   
+   textTransform - whether to lowercase text in portlets, tabs etc.
+   
+   evenRowBackgroundColor - the background color of even rows in listings
+   
+   oddRowBackgroundColor - the background color of even rows in listings
+   
+   notifyBorderColor - border color of notification elements like the status message, the calendar focus
+   
+   notifyBackgroundColor - background color of notification elements like the status message, the calendar focus
+   
+   helpBackgroundColor - background color of information pop-ups (currently not used)
+          
+ */
+
+

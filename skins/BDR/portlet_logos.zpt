@@ -1,0 +1,24 @@
+<html> 
+  <body> 
+     <div metal:define-macro="portlet">                 
+      <div class="portlet" id="portlet-logos" tal:condition="python:not(context.listeGroupesIntranetUtilisateur())"> 
+        <dt class="portletHeader">Organismes de tutuelle</dt>
+ 
+        <div class="portletBody">
+           <div class="portletContent odd" align="center"> <img src="/bdr/barreblanche.jpg">
+           <a href="http://w3.inra.fr/" target="_self"><img src="/bdr/logoinra.gif"></a>
+           </div>  
+           <div class="portletContent odd" align="center">
+           <a href="http://www.vet-alfort.fr/" target="_self"><img src="/bdr/logoenva.gif"></a>
+           </div>           
+           <div class="portletContent odd" align="center"> 
+           <a href="http://www.cnrs.fr/" target="_self"><img src="/bdr/logocnrs.gif"></a>
+           </div> 
+<!--          <div class="portletContent even"> 
+            World 
+          </div> -->
+        </div> 
+      </div> 
+    </div> 
+  </body> 
+</html>
