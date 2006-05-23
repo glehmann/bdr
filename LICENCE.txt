@@ -1,5 +1,0 @@
-public domain
-
-* Made by BDR and MIG units, Institut National de Recherche Agronomique, Jouy en Josas
-
-* authors : Christian Poirier (design, visuals) Thomas Desvenain (packaging, workflows), Gaetan Laemanh, Christophe Caron

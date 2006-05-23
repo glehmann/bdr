@@ -1,1 +1,0 @@
-Install the product and use plone_quickinstaller
