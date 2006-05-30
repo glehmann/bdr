@@ -1,0 +1,56 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+
+<div metal:define-macro="portlet">
+
+<dl class="portlet"
+    id="portlet-portlet_zonesUtilisateur"
+     tal:condition="python:context.listeGroupesIntranetUtilisateur()">
+
+    <dt class="portletHeader">Vos espaces de redaction</dt>
+
+
+    <dd class="portletItem"  tal:condition="python:context.equipeUtilisateur()" tal:define="equipe here/equipeUtilisateur">
+
+        <h5>Votre Equipe</h5>
+        <ul class="visualNoMarker">
+           <li>
+
+    <div tal:attributes="class python:'contenttype-' + normalizeString(equipe['portal_type'])">
+
+                <a href=""
+                   tal:attributes="href equipe/absolute_url;
+                                   class string:visualIconPadding"
+                   tal:content="equipe/Title" />
+
+     </div>
+            </li>
+        </ul>
+
+    </dd>
+
+
+
+    <dd class="portletItem" tal:condition="python:context.listeGroupesIntranetUtilisateur()">
+        <h5>Vos groupes intranet</h5>
+      <ul class="visualNoMarker">
+            <li tal:repeat="groupeIntranetUtilisateur python:context.listeGroupesIntranetUtilisateur()">
+
+    <div tal:attributes="class python:'contenttype-'+normalizeString(groupeIntranetUtilisateur['portal_type'])">
+
+                <a tal:attributes="href groupeIntranetUtilisateur/absolute_url;
+                                   class string:visualIconPadding "
+                           tal:content="groupeIntranetUtilisateur/Title" />
+    </div>
+            </li>
+        </ul>
+    </dd>
+
+
+</dl>
+
+</div>
+</body>
+</html>
